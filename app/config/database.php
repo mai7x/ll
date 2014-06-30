@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'll',
+			'database'  => 'cards',
 			'username'  => 'root',
 			'password'  => 'asdfasdf',
 			'charset'   => 'utf8',
