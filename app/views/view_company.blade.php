@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','Company Index')
+@section('title','会社情報')
 @section('content')
 		<div class="col-md-12">
 			<h1>Company Index</h1>
