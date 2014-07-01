@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Companies</title>
-		<link type="text/css" rel="stylesheet" href="http://153.121.56.186/cards/public/assets/css/bootstrap.css?1402204909" />
-	<style>
-		body { margin: 40px; }
-	</style>
-</head>
+
+<?php $title = "会社一覧"; ?>
+<?php include('template.php'); ?>
 <body>
 	<div class="container">
 		<div class="col-md-12">
