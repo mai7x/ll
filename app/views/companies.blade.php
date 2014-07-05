@@ -23,6 +23,7 @@
 	<td>
 	<div class="btn-toolbar"> <div class="btn-group">
 	<a class="btn btn-small" href="companies/view/{{ $company->id; }} "><i class="icon-eye-open"></i> View</a >
+	<a class="btn btn-small" href="companies/edit/{{ $company->id; }} "><i class="icon-eye-open"></i> Edit(new)</a >
 	<a class="btn btn-small" href="http://153.121.56.186/cards/public/companies/edit/1"><i class="icon-wrench"></i> Edit</a>
 	<a class="btn btn-small btn-danger" onclick="return confirm('Are you sure?')" href="companies/delete/{{ $company->id; }}">
 <i class="icon-trash icon-white"></i> Delete</a>					</div>

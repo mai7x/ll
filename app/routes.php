@@ -29,13 +29,21 @@ Route::get('person/add', function(){
 	$data['select_menu_of_companies'] = DB::table('companies')->lists('company_name','id');
 	return View::make('add_person',$data);
 });
+
+// Add Company
 Route::get('companies/add', function(){
 	return View::make('add_company');
 });
-
 Route::post('companies/add', 'CompanyController@addCompany');
-Route::post('person/add', 'PersonController@addPerson');
 
+// Edit Company
+Route::get('companies/edit/{id}', function($id){
+	$data['company'] = Company::find($id);
+	return View::make('edit_company',$data);
+});
+Route::post('companies/edit/{id}', 'CompanyController@editCompany');
+
+//View Company
 Route::get('companies/view/{id}',function($id){
 	$data['company'] = Company::find($id);
 	$data['cards'] = $data['company']->card;
@@ -49,6 +57,8 @@ Route::get('companies/delete/{id}',function($id){
 	$data['companies'] = Company::all(); // CompanyModelの全情報を取得
 	return View::make('companies',$data );
 });
+Route::post('person/add', 'PersonController@addPerson');
+
 
 
 
