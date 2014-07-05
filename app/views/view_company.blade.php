@@ -1,13 +1,10 @@
 @extends('layouts.master')
 @section('title','会社情報')
+@section('h1_title','Company Index')
 @section('content')
-		<div class="col-md-12">
-			<h1>Company Index</h1>
-			<hr>
-		</div>
 
 	
-		<div class="col-md-12">
+<div class="col-md-12">
 <h2>Viewing Company <span class='muted'>#{{ $company->id }}</span></h2>
 <p>
 <strong>会社名:</strong>
