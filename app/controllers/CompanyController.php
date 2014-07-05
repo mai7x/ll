@@ -30,7 +30,6 @@ class CompanyController extends BaseController {
 			return Redirect::to('companies');
 			//return Redirect::to('companies/add')->withErrors($v->getMessages());
 		}
-		return View::make('add_company');
 
 	}
 
@@ -45,19 +44,15 @@ class CompanyController extends BaseController {
 			$company->company_information = Input::get('company_information');
 
 			$company->save();
-		//	Company::create(array(
-		//		'company_name' => Input::get('company_name'),
-		//		'company_information' => Input::has('company_information') ? Input::get('company_information') : null,
-		//	     ));
 
-			return 'Edited a Company';
+			return Redirect::to('companies');
 
 		}else{ // Validation失敗の場合
 			
-			return Redirect::to('companies');
+//			Input::flash();
+			return Redirect::back()->withInput()->withErrors($v->messages());
 			//return Redirect::to('companies/add')->withErrors($v->getMessages());
 		}
-		return View::make('add_company');
 
 	}
 }
