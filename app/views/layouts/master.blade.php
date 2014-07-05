@@ -11,7 +11,7 @@
   <body>
     <nav class="navigation">
       @section('navigation')
-	<a class="btn btn-small" href="../../companies"><i class="icon-eye-open"></i> CompanyIndex</a>
+	<a class="btn btn-small" href="/ll/public/companies"><i class="icon-eye-open"></i> CompanyIndex</a>
       @show
     </nav>
  
