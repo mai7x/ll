@@ -18,8 +18,11 @@ Route::get('/', function()
 
 // Login 
 Route::get('login', function(){
-	return 'login page is here.'; //View::make('add_company');
+	return View::make('login');
 });
+
+Route::post('login','UserController@doLogin');
+
 
 
 Route::group(array('before' => 'auth'), function()
