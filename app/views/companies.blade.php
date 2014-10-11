@@ -8,9 +8,9 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Company name</th>
-			<th>Company information</th>
-			<th>&nbsp;</th>
+			<th>会社名</th>
+			<th>会社情報</th>
+			<th>アクション&nbsp;</th>
 		</tr>
 	</thead>
 	<tbody>

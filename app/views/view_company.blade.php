@@ -37,7 +37,7 @@
 <td>{{ $card->position }} </td>
 <td> {{ $card->email; }} </td>
 <td> {{ $card->tel; }} </td>
-<td> <a class="btn btn-small" href="http://153.121.56.186/cards/public/cards/edit/1"><i class="icon-wrench"></i> Edit</a></td>
+<td> <a class="btn btn-small" href="http://153.121.56.186/cards/public/cards/edit/1"><i class="icon-wrench"></i> Editここ要修正</a></td>
 </tr>
 @endforeach
 
