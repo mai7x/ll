@@ -25,7 +25,7 @@ class UserController extends BaseController {
 		}else{ //Validation OK
 			if(Auth::attempt( Input::only('name','password')))
 			{//認証OK
-				return Redirect::intended('/');
+				return Redirect::intended('companies');
 			}else{ //Validation OK, 認証失敗
 				return Redirect::back()->withInput();
 			}
