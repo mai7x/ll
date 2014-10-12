@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>@yield('title','名無し')</title>
-		<link type="text/css" rel="stylesheet" href="http://153.121.56.186/cards/public/assets/css/bootstrap.css?1402204909" />
+		<link type="text/css" rel="stylesheet" href="http://153.121.56.186/ll/public/assets/css/bootstrap.css?1402204909" />
 	<style>
 		body { margin: 40px; }
 	</style>
