@@ -9,17 +9,30 @@
 	</style>
 </head>
   <body>
-    <nav class="navigation">
       @section('navigation')
-	<a class="btn btn-small" href="/ll/public/companies"><i class="icon-eye-open"></i> CompanyIndex</a>
-      @show
+    <nav class="navbar navbar-default" role="navigation">
+     
+     <div class="container-fluid">
+        <div class="navbar-header">
+         <a class="navbar-brand" href="#">@yield('h1_title','名無し')</a>
+        </div>
+        <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+            <li><a href="#">コンテンツ２</a></li>
+            <li><a href="#">コンテンツ３</a></li>
+	    <li><a class="btn btn-small" href="/ll/public/companies"><i class="icon-eye-open"></i> CompanyIndex</a></li>
+         </ul>
+	<ul class="nav navbar-nav navbar-right">
+            <li><a href="#">ログアウト</a></li>
+	</ul>
+        </div><!-- /.navbar-collapse -->
+        
+     </div><!-- /.container-fluid -->
     </nav>
 
+      @show
 
-<div class="col-md-12">
-<h1>@yield('h1_title','名無し')</h1>
-<hr>
-</div>
+
  
     <div class="container">
        @yield('content')

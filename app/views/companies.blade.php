@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title','会社一覧')
-@section('h1_title','Company Index')
+@section('h1_title','登録会社一覧')
 @section('content')
 
 	
@@ -20,12 +20,10 @@
 	<td>{{ $company->company_name }}</td>
 	<td>{{ $company->company_information }}</td>
 	<td>
-	<div class="btn-toolbar"> <div class="btn-group">
-	<a class="btn btn-small" href="companies/view/{{ $company->id; }} "><i class="icon-eye-open"></i> View</a >
-	<a class="btn btn-small" href="companies/edit/{{ $company->id; }} "><i class="icon-eye-open"></i> Edit</a >
+	<a class="btn btn-primary" href="companies/view/{{ $company->id; }} "><i class="icon-eye-open"></i> View</a >
+	<a class="btn btn-primary" href="companies/edit/{{ $company->id; }} "><i class="icon-eye-open"></i> Edit</a >
 	<a class="btn btn-small btn-danger" onclick="return confirm('Are you sure?')" href="companies/delete/{{ $company->id; }}">
-<i class="icon-trash icon-white"></i> Delete</a>					</div>
-</div>
+<i class="icon-trash icon-white"></i> Delete</a>		
 
 	</td>
 </tr>
