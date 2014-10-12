@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Look at me Login</title>
+	<title>Login Page</title>
 </head>
 <body>
 
@@ -10,18 +10,19 @@
 
 		<!-- if there are login errors, show them here -->
 		<p>
-			{{ $errors->first('name') }}
-			{{ $errors->first('password') }}
-		</p>
+			{{ Session::get('flash_error')}}
 
+		</p>
 		<p>
 			{{ Form::label('name', 'UserName') }}
 			{{ Form::text('name', Input::old('name') ) }}
+			{{ $errors->first('name') }}
 		</p>
 
 		<p>
 			{{ Form::label('password', 'Password') }}
 			{{ Form::password('password') }}
+			{{ $errors->first('password') }}
 		</p>
 
 		<p>{{ Form::submit('ログイン') }}</p>

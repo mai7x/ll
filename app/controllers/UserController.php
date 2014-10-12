@@ -20,14 +20,18 @@ class UserController extends BaseController {
 
 		$val = Validator::make(Input::all(), $rules);
 		
-		if($val->fails()){
-			return Redirect::to('login')->withErrors($val)->withInput(Input::except('password'));
+		if($val->fails()){//Validation NG
+			return Redirect::to('login')
+				->withErrors($val)
+				->withInput(Input::except('password'));
 		}else{ //Validation OK
 			if(Auth::attempt( Input::only('name','password')))
 			{//認証OK
 				return Redirect::intended('companies');
 			}else{ //Validation OK, 認証失敗
-				return Redirect::back()->withInput();
+				return Redirect::to('login')
+					->with('flash_error','IDまたはパスワードが誤っています。')
+					->withInput(Input::except('password'));
 			}
 		}
 	}
