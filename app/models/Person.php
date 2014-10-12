@@ -10,6 +10,7 @@ class Person extends Eloquent {
 		'firstname_furigana',
 		'foreign',
 		'information',
+		'last_card',
 		);
 
 	public static function validate($input){
@@ -22,6 +23,7 @@ class Person extends Eloquent {
 
 	public function card()
 	{
+		$this->hasOne('Card', 'last_card');
 		return $this->hasMany('Card');
 	}
 }

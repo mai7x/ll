@@ -18,9 +18,8 @@
         </div>
         <div class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
-            <li><a href="#">コンテンツ２</a></li>
-            <li><a href="#">コンテンツ３</a></li>
-	    <li><a href="/ll/public/companies"> CompanyIndex</a></li>
+	    <li><a href="/ll/public/companies">登録会社一覧</a></li>
+	    <li><a href="/ll/public/cards">登録名刺一覧</a></li>
          </ul>
 	<ul class="nav navbar-nav navbar-right">
             <li><a href="logout">ログアウト</a></li>

@@ -34,6 +34,7 @@ Route::get('logout', function()
 Route::group(array('before' => 'auth'), function()
 {
 
+	//Company Index
 	Route::get('companies', function()
 	{
 		$data['companies'] = Company::all(); // CompanyModelの全情報を取得
@@ -41,12 +42,6 @@ Route::group(array('before' => 'auth'), function()
 
 		return View::make('companies',$data );
 	});
-
-	Route::get('person/add', function(){
-		$data['select_menu_of_companies'] = DB::table('companies')->lists('company_name','id');
-		return View::make('add_person',$data);
-	});
-
 
 	// Add Company
 	Route::get('companies/add', function(){
@@ -75,6 +70,22 @@ Route::group(array('before' => 'auth'), function()
 		$data['companies'] = Company::all(); // CompanyModelの全情報を取得
 		return View::make('companies',$data );
 	});
+
+	//Card Index
+	Route::get('cards', function()
+	{
+		$data['cards'] =Card::all(); // CardModelの全情報を取得
+
+
+		return View::make('cards',$data );
+	});
+
+	Route::get('person/add', function(){
+		$data['select_menu_of_companies'] = DB::table('companies')->lists('company_name','id');
+		return View::make('add_person',$data);
+	});
+
+
 	Route::post('person/add', 'PersonController@addPerson');
 
 
