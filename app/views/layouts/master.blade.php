@@ -20,10 +20,10 @@
          <ul class="nav navbar-nav">
             <li><a href="#">コンテンツ２</a></li>
             <li><a href="#">コンテンツ３</a></li>
-	    <li><a class="btn btn-small" href="/ll/public/companies"><i class="icon-eye-open"></i> CompanyIndex</a></li>
+	    <li><a href="/ll/public/companies"> CompanyIndex</a></li>
          </ul>
 	<ul class="nav navbar-nav navbar-right">
-            <li><a href="#">ログアウト</a></li>
+            <li><a href="logout">ログアウト</a></li>
 	</ul>
         </div><!-- /.navbar-collapse -->
         

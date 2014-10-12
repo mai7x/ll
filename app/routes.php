@@ -24,6 +24,12 @@ Route::get('login', function(){
 Route::post('login','UserController@doLogin');
 
 
+// Logout
+Route::get('logout', function()
+{
+	 Auth::logout();
+	return Redirect::to('login');
+});
 
 Route::group(array('before' => 'auth'), function()
 {
