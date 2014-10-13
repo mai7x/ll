@@ -27,6 +27,7 @@
 <td>{{ $card->position }}  </td>
 <td>{{ $card->tel }}  </td>
 <td>{{ $card->email }}  </td>
+<td><a class="btn btn-primary" href="cards/edit/{{ $card->id; }} ">Edit</a ></td>
 
 </tr>
 

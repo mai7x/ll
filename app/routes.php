@@ -76,9 +76,15 @@ Route::group(array('before' => 'auth'), function()
 	{
 		$data['cards'] =Card::all(); // CardModelの全情報を取得
 
-
 		return View::make('cards',$data );
 	});
+
+	// Edit Card
+	Route::get('cards/edit/{id}', function($id){
+		$data['card'] = Card::find($id);
+		return View::make('edit_card',$data);
+	});
+	Route::post('cards/edit/{id}', 'CardController@editCard');
 
 	Route::get('person/add', function(){
 		$data['select_menu_of_companies'] = DB::table('companies')->lists('company_name','id');
