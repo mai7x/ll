@@ -86,8 +86,10 @@ Route::group(array('before' => 'auth'), function()
 	});
 	Route::post('cards/edit/{id}', 'CardController@editCard');
 
+	//Add Person and Card
 	Route::get('person/add', function(){
 		$data['select_menu_of_companies'] = DB::table('companies')->lists('company_name','id');
+		$data['select_menu_of_companies'][0] = "選択してください";
 		return View::make('add_person',$data);
 	});
 

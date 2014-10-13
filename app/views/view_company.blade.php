@@ -37,7 +37,7 @@
 <td>{{ $card->position }} </td>
 <td> {{ $card->email; }} </td>
 <td> {{ $card->tel; }} </td>
-<td> <a class="btn btn-small" href="cards/edit/{{ $card->id; }} "> Edit</a></td>
+<td> <a class="btn btn-small" href="../../cards/edit/{{ $card->id; }} "> Edit</a></td>
 </tr>
 @endforeach
 
